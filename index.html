@@ -1,63 +1,820 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anoop U K | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-light: #60a5fa;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --subtext: #475569;
+      --white: #ffffff;
+      --accent-1: #eff6ff;
+      --accent-2: #e0f2fe;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header styles */
+    header {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h80v80H10z" fill="none" stroke="%233b82f6" stroke-width="0.5" opacity="0.1"/></svg>');
+      opacity: 0.15;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      position: relative;
+    }
+
+    header p {
+      color: var(--subtext);
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    /* Navigation styles */
+    nav {
+      background: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Section styles */
+    section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* Content card styles */
+    .content-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    }
+
+    .about p {
+      font-size: 1rem;
+      color: var(--subtext);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Education section styles */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .education-item {
+      padding: 1rem 0;
+      position: relative;
+    }
+
+    .education-item dt {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+
+    .education-item dd {
+      color: var(--subtext);
+      font-size: 1rem;
+    }
+
+    /* Skills section styles */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      margin-bottom: 0.8rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--primary-light);
+    }
+
+    .skill-category h3 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .skill-category ul {
+      list-style: none;
+      color: var(--subtext);
+      font-size: 0.95rem;
+    }
+
+    .skill-category li {
+      margin-bottom: 0.3rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .skill-category li::before {
+      content: '•';
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+    }
+
+    /* Projects section styles */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-light);
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card h3 {
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .project-card .description {
+      color: var(--subtext);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .project-card .achievement {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: var(--accent-1);
+      color: var(--text);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .tech-badge:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .tech-badge:hover::after {
+      content: attr(data-tech);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: var(--white);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      z-index: 1000;
+      opacity: 0;
+      animation: tooltip-appear 0.3s ease forwards;
+    }
+
+    @keyframes tooltip-appear {
+      0% { opacity: 0; transform: translateX(-50%) translateY(5px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
+    /* Improved Contact section styles */
+    .contact-section {
+      background: linear-gradient(135deg, var(--white), var(--accent-1));
+      padding: 3rem 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 4rem auto;
+      max-width: 1200px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text);
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .contact-title i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+
+    .contact-socials {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-socials a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--white);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+      border: 1px solid transparent;
+    }
+
+    .contact-socials a:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .contact-socials i {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 1rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .send-btn {
+      background: transparent;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.8rem 2rem;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+    }
+
+    .send-btn:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--text);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary));
+    }
+
+    /* Dream company section */
+    .dream-company-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dream-company-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .content-card {
+        padding: 1.5rem;
+      }
+
+      .contact-socials {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contact-form {
+        padding: 1.5rem;
+      }
+
+      .projects-grid, .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section {
+        padding: 2rem 1rem;
+      }
+
+      .container {
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .contact-title {
+        font-size: 1.6rem;
+      }
+
+      .send-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Hello, I'm Anoop U K 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
-    </header>
 
-    <section>
-        <h2>🛠️ Projects</h2>
+<header>
+  <h1>Anoop U K</h1>
+  <p>Computer Science & Engineering | KLE Technological University</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#business-case">Business Case</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <div class="content-card">
+    <p>
+      I'm <strong>Anoop U Kadakol</strong>, a Computer Science undergraduate at KLE Technological University with a strong foundation in programming and a passion for solving real-world problems through technology.
+    </p>
+    <p>
+      My interests span across <strong>Networking, Cyber Security, Cloud Computing, and Machine Learning</strong>. I've developed intelligent systems including a deep learning-based forest fire detection model and an SDN-based intelligent routing engine integrating ML techniques.
+    </p>
+    <p>
+      I thrive on challenges and continuously seek opportunities to grow and build impactful solutions. I enjoy working on collaborative projects, diving deep into emerging technologies, and sharing knowledge with peers.
+    </p>
+  </div>
+</section>
+
+<section id="education" class="education">
+  <h2>Education</h2>
+  <div class="content-card">
+    <div class="education-grid">
+      <div class="education-item">
+        <dt>Degree</dt>
+        <dd>B.Tech in Computer Science & Engineering</dd>
+      </div>
+      <div class="education-item">
+        <dt>University</dt>
+        <dd>KLE Technological University</dd>
+      </div>
+      <div class="education-item">
+        <dt>Expected Graduation</dt>
+        <dd>2026</dd>
+      </div>
+      <div class="education-item">
+        <dt>Relevant Courses</dt>
+        <dd>Data Structures, Algorithms, Web Development, Cloud Computing, AI</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Technical Skills</h2>
+  <div class="content-card">
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
         <ul>
-            <li><strong>Project 1</strong>: A short description of your project1.</li>
-            <li><strong>Project 2</strong>: A short description of another project2.</li>
+          <li>C, C++</li>
+          <li>SQL</li>
+          <li>Python (Basic)</li>
         </ul>
-
-        <h2>🚀 Skills</h2>
+      </div>
+      <div class="skill-category">
+        <h3>Web Development</h3>
         <ul>
-            <li>C, C++, Python(Basic), JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Node.js, React.js</li>
         </ul>
-
-        <h2>🌐 Find Me Online</h2>
+      </div>
+      <div class="skill-category">
+        <h3>Cloud & DevOps</h3>
         <ul>
-            <li><a href="https://github.com/Anoop042004" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/anoop-uk-kadakol-83359726a/" target="_blank">LinkedIn</a></li>
+          <li>OpenStack</li>
+          <li>Docker, Kubernetes (Basic)</li>
         </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Soft Skills</h3>
+        <ul>
+          <li>Git, GitHub, Visual Studio Code</li>
+          <li>Problem Solving, Team Collaboration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Algorithmic Problem Solving</dd>
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
 
-            <dt>Course Code</dt>
-            <dd>Course Code Placeholder</dd>
+    <div class="project-card">
+      <h3>Intelligent Routing Management in SDN</h3>
+      <p class="description">
+        ML-powered routing optimization system leveraging Software-Defined Networking for dynamic data path decisions. Uses LSTM models to predict optimal routing paths based on real-time network conditions.
+      </p>
+      <p class="achievement">• Achieved 20-25% reduction in network latency during high-traffic simulations</p>
+      <div class="tech-badges">
+        <span class="tech-badge" data-tech="Used for network simulation">Mininet</span>
+        <span class="tech-badge" data-tech="SDN controller to manage network flow">OpenDaylight</span>
+        <span class="tech-badge" data-tech="LSTM for predicting optimal paths">TensorFlow</span>
+        <span class="tech-badge" data-tech="Python scripting for logic and automation">Python</span>
+      </div>
+    </div>
 
-            <dt>Name</dt>
-            <dd>Anoop U Kadakol</dd>
+    <div class="project-card">
+      <h3>Forest Fire and Smoke Detection</h3>
+      <p class="description">
+        Real-time forest fire detection system using computer vision and deep learning. Implemented YOLO11-M architecture, fine-tuned on diverse forest imagery including aerial, satellite, and ground-level images.
+      </p>
+      <p class="achievement">• Achieved 84.9% mAP accuracy across various environmental conditions</p>
+      <div class="tech-badges">
+        <span class="tech-badge" data-tech="YOLO11-M selected for best trade-off">YOLO11</span>
+        <span class="tech-badge" data-tech="Used for model training and vision">PyTorch</span>
+        <span class="tech-badge" data-tech="Cloud training environment">Google Colab</span>
+        <span class="tech-badge" data-tech="VS Code used for dev & debugging">VS Code</span>
+      </div>
+    </div>
 
-            <dt>SRN</dt>
-            <dd>01FE22BCS285</dd>
+    <div class="project-card">
+      <h3>Mobile Edge Computing in Private 5G Network</h3>
+      <p class="description">
+        Developed a Private 5G testbed by integrating Open5GS with srsRAN and USRP B210. Enabled real-time data offloading and local processing using Mobile Edge Computing (MEC).
+      </p>
+      <p class="achievement">• Enabled low-latency computation and 5G UE access via local gNB</p>
+      <div class="tech-badges">
+        <span class="tech-badge" data-tech="Core network for private 5G deployment">Open5GS</span>
+        <span class="tech-badge" data-tech="Software RAN for 5G radio interfacing">srsRAN</span>
+        <span class="tech-badge" data-tech="Used as 5G base station with SDR">USRP B210</span>
+        <span class="tech-badge" data-tech="Hosted code & scripts used for testing">GitHub</span>
+      </div>
+    </div>
 
-            <dt>Course Instructor</dt>
-            <dd>Instructor Name Placeholder</dd>
+    
 
-            <dt>University</dt>
-            <dd>KLE Technological University</dd>
+  </div>
+</section>
 
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>Google</dd>
-        </dl>
+<section id="dream-company-section">
+  <h2>Dream Company</h2>
+  <div class="dream-company-card">
+    <h3>Microsoft</h3>
+    <p><strong>Microsoft</strong> is a global technology leader, renowned for its innovative solutions across software, hardware, and cloud computing. Known for pioneering products like Windows, Office, and Azure, Microsoft empowers individuals and organizations to achieve more with cutting-edge technology. As a leader in cloud services, AI, and quantum computing, Microsoft continuously shapes the future of computing through robust platforms and ethical AI initiatives. With a focus on digital transformation, accessibility, and sustainability, Microsoft drives global progress in both business and society, creating tools that enhance productivity, creativity, and collaboration for users around the world.</p>
+  </div>
+</section>
 
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-    </section>
+<section id="business-case" class="business-case">
+  <h2>Business Case Study</h2>
+  <div class="projects-grid">
+    <!-- Microsoft Case Study: Azure's Cloud Revolution -->
+    <div class="project-card">
+      <h3>Microsoft's Cloud Revolution: Azure's Transformation</h3>
+      <div class="description">
+        Microsoft made a pivotal shift from traditional software to cloud computing, turning Azure into one of the leading cloud platforms globally. This shift contributed massively to Microsoft's $2 trillion market cap growth. The transformation was fueled by significant investments in infrastructure, AI, and hybrid cloud solutions, which enabled the company to capture a broad customer base across industries.
+      </div>
+      <div class="achievement">
+        Result: Azure became a key competitor to AWS and Google Cloud, expanding Microsoft's reach in the enterprise software market.
+      </div>
+      <div class="tech-badges">
+        <span class="tech-badge">Azure</span>
+        <span class="tech-badge">Cloud Computing</span>
+        <span class="tech-badge">AI</span>
+        <span class="tech-badge">Hybrid Cloud</span>
+      </div>
+    </div>
+    
+    <!-- Microsoft Case Study: Xbox Gaming Division -->
+    <div class="project-card">
+      <h3>Microsoft's Xbox Gaming Revolution</h3>
+      <div class="description">
+        Microsoft's Xbox division successfully built a competitive gaming platform from scratch. Through strategic acquisitions, innovation in gaming consoles, and a focus on services like Xbox Game Pass, Microsoft managed to secure its position as one of the top three gaming console makers in the world, alongside Sony and Nintendo.
+      </div>
+      <div class="achievement">
+        Result: Xbox's growth significantly expanded Microsoft's presence in the gaming industry, shifting from software to entertainment and gaming services.
+      </div>
+      <div class="tech-badges">
+        <span class="tech-badge">Xbox</span>
+        <span class="tech-badge">Gaming</span>
+        <span class="tech-badge">Console</span>
+      </div>
+    </div>
+
+    <!-- Microsoft Case Study: GitHub's Strategic Acquisition -->
+    <div class="project-card">
+      <h3>GitHub Acquisition and Open Source Support</h3>
+      <div class="description">
+        When Microsoft acquired GitHub, it faced a challenge of winning the trust of developers. However, Microsoft kept GitHub independent and supported the open-source community, fostering developer loyalty. This move helped Microsoft integrate into the developer ecosystem while also leveraging GitHub's vast user base to enhance its cloud and software services.
+      </div>
+      <div class="achievement">
+        Result: GitHub became an integral part of Microsoft's developer strategy, bolstering its position as a leading provider of development tools.
+      </div>
+      <div class="tech-badges">
+        <span class="tech-badge">GitHub</span>
+        <span class="tech-badge">Open Source</span>
+        <span class="tech-badge">Developer Tools</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="contact-title"><i class="fas fa-envelope"></i> Contact Me</h2>
+    
+    <div class="contact-socials">
+      <a href="https://github.com/Anoop042004" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/anoop-uk-kadakol-83359726a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:kadakolanoopuk@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+    </div>
+    
+    <form class="contact-form" action="https://formspree.io/f/mdoqvwjv" method="POST">
+      <input type="hidden" name="_subject" value="New portfolio contact from website">
+      <input type="hidden" name="_next" value="thank-you.html">
+      
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Anoop U K. All rights reserved.
+</footer>
+
 </body>
 </html>
