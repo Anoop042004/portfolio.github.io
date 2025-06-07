@@ -555,6 +555,69 @@
         width: 95%;
       }
     }
+    #portfolio {
+  padding: 40px 20px;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#portfolio .intro {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.case-study-card {
+  background-color: #fff;
+  border-left: 5px solid #3498db;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-study-card h3 {
+  font-size: 1.5rem;
+  color: #1d3557;
+  margin-bottom: 12px;
+}
+
+.case-study-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.case-study-card ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.case-study-card ul li {
+  list-style: disc;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
 
     @media (max-width: 480px) {
       header h1 {
@@ -602,7 +665,7 @@
       I'm <strong>Anoop U Kadakol</strong>, a Computer Science undergraduate at KLE Technological University with a strong foundation in programming and a passion for solving real-world problems through technology.
     </p>
     <p>
-      My interests span across <strong>Networking, Cyber Security, Cloud Computing, and Machine Learning</strong>. I've developed intelligent systems including a deep learning-based forest fire detection model and an SDN-based intelligent routing engine integrating ML techniques.
+      My interests span across <strong>Networking, Cloud Computing, Cyber Security and Machine Learning</strong>. I've developed intelligent systems including a deep learning-based forest fire detection model and an SDN-based intelligent routing engine integrating ML techniques.
     </p>
     <p>
       I thrive on challenges and continuously seek opportunities to grow and build impactful solutions. I enjoy working on collaborative projects, diving deep into emerging technologies, and sharing knowledge with peers.
@@ -643,7 +706,7 @@
         <ul>
           <li>C, C++</li>
           <li>SQL</li>
-          <li>Python (Basic)</li>
+          <li>Python </li>
         </ul>
       </div>
       <div class="skill-category">
@@ -657,7 +720,7 @@
         <h3>Cloud & DevOps</h3>
         <ul>
           <li>OpenStack</li>
-          <li>Docker, Kubernetes (Basic)</li>
+          <li>Docker, Kubernetes </li>
         </ul>
       </div>
       <div class="skill-category">
@@ -725,92 +788,874 @@
 <section id="dream-company-section">
   <h2>Dream Company</h2>
   <div class="dream-company-card">
-    <h3>Microsoft</h3>
-    <p><strong>Microsoft</strong> is a global technology leader, renowned for its innovative solutions across software, hardware, and cloud computing. Known for pioneering products like Windows, Office, and Azure, Microsoft empowers individuals and organizations to achieve more with cutting-edge technology. As a leader in cloud services, AI, and quantum computing, Microsoft continuously shapes the future of computing through robust platforms and ethical AI initiatives. With a focus on digital transformation, accessibility, and sustainability, Microsoft drives global progress in both business and society, creating tools that enhance productivity, creativity, and collaboration for users around the world.</p>
+    <h3>Amazon Web Services</h3>
+    <p><strong>Amazon Web Services (AWS)</strong> is the world’s leading cloud platform, offering scalable, reliable, and cost-effective infrastructure services. As a pioneer in cloud computing, AWS provides over 200 fully featured services including computing power, storage, and content delivery through services like EC2, S3, and CloudFront. AWS empowers startups to Fortune 500 companies with global reach, deep integration with AI/ML tools, and robust support for emerging technologies. With a commitment to innovation, performance, and security, AWS continues to define the future of cloud technology and digital transformation.</p>
   </div>
 </section>
 
-<section id="business-case" class="business-case">
-  <h2>Business Case Study</h2>
-  <div class="projects-grid">
-    <!-- Microsoft Case Study: Azure's Cloud Revolution -->
-    <div class="project-card">
-      <h3>Microsoft's Cloud Revolution: Azure's Transformation</h3>
-      <div class="description">
-        Microsoft made a pivotal shift from traditional software to cloud computing, turning Azure into one of the leading cloud platforms globally. This shift contributed massively to Microsoft's $2 trillion market cap growth. The transformation was fueled by significant investments in infrastructure, AI, and hybrid cloud solutions, which enabled the company to capture a broad customer base across industries.
-      </div>
-      <div class="achievement">
-        Result: Azure became a key competitor to AWS and Google Cloud, expanding Microsoft's reach in the enterprise software market.
-      </div>
-      <div class="tech-badges">
-        <span class="tech-badge">Azure</span>
-        <span class="tech-badge">Cloud Computing</span>
-        <span class="tech-badge">AI</span>
-        <span class="tech-badge">Hybrid Cloud</span>
-      </div>
-    </div>
+<section id="portfolio">
+  <h2>AWS CloudFront Business Case Study</h2>
+
+  <div class="case-study-card">
+    <h3>Introduction</h3>
+    <p class="intro">
+      Amazon CloudFront is a highly scalable and secure content delivery network (CDN) service designed to deliver data, videos, applications, and APIs to users globally with low latency and high transfer speeds. 
+      It plays a critical role in accelerating content delivery by distributing it through a worldwide network of edge locations. <b>This case study explores how CloudFront addresses real-world business challenges, 
+      integrates data structures and algorithms for optimization, and leverages AI to enhance user experience and system intelligence.</b>
+    </p>
+  </div>
+
+  <div class="case-study-card">
+  <h3>Business Use Case 1: Optimizing Video Streaming for EdTech Platforms</h3>
+  <p><strong>Problem:</strong> EdTech platforms like BYJU’S and Unacademy face high latency and buffering, especially for students in rural or low-bandwidth areas.</p>
+  
+  <p><strong>Challenges:</strong> Delivering high-quality videos at low latency across geographically dispersed users.</p>
+  
+  <p><strong>Market Benefits:</strong></p>
+  <ul>
+    <li>Faster video startup</li>
+    <li>Reduced buffering</li>
+    <li>Stable performance during peak hours</li>
+  </ul>
+  
+  <p><strong>Design Techniques and Algorithms:</strong></p>
+  <ul>
+    <li><strong>Content Caching at Edge (CloudFront + S3)</strong><br>
+        <em>Technique Used:</em> CDN caching with TTL-based invalidation<br>
+        <em>Time Complexity:</em> O(1) on cache hit, O(n) on miss (file size dependent)<br>
+        <em>Space Complexity:</em> Proportional to content cached at edge
+    </li>
+  </ul>
+  
+  <p><strong>Real-Time Usage:</strong> CloudFront caches videos, PDFs, and quizzes from S3. Lambda@Edge adds custom logic like access control. Signed URLs restrict content to authorized users.</p>
+  
+ <div class="system-design-image">
+    <h4>System Architecture Diagram</h4>
+    <img src="images/edgeimage.png"alt="System Architecture Diagram" width="600" height="400" />
+    <p><em>Figure 1: High-level architecture for video streaming using AWS CloudFront, S3, and Lambda@Edge.</em></p>
+  </div>  
+<p><strong>Analysis:</strong> ~35% reduction in latency, ~45% lower buffering, improved streaming quality in remote areas.</p>
+</div>
+
+
+
+  <!-- Repeat similar structure for other use cases -->
+</section>
+<div class="case-study-card">
+  <h3>Business Use Case 2: Secure Content Delivery for OTT Platforms</h3>
+  <p><strong>Problem:</strong> OTT platforms like Netflix, Amazon Prime, and Disney+ face challenges in preventing unauthorized access, password sharing, and piracy.</p>
+  
+  <p><strong>Challenges:</strong> Detecting and blocking millions of unauthorized or suspicious sessions in real-time without affecting legitimate users.</p>
+  
+  <p><strong>Market Benefits:</strong></p>
+  <ul>
+    <li>Reduced unauthorized access</li>
+    <li>Improved user trust and compliance</li>
+    <li>Faster request validation at the edge</li>
+  </ul>
+  
+  <p><strong>Design Techniques and Algorithms:</strong></p>
+  <ul>
+    <li><strong style="font-size: 1.1rem;">Hash Maps for Token Validation in Secure OTT Delivery</strong>
+
+  <p>OTT platforms use AWS CloudFront with Lambda@Edge to validate millions of JWT session tokens efficiently at the edge.</p>
+
+  <strong>Role of CloudFront:</strong>
+  <p>CloudFront delivers content globally and runs Lambda@Edge functions near users, enabling real-time token validation without hitting origin servers.</p>
+
+  <strong>How Hash Maps Work:<</strong>
+  <ul>
+    <li>JWT tokens include a <code>kid</code> (key ID) in their header.</li>
+    <li>Lambda@Edge caches <code>kid → RSA public key</code> mappings in an in-memory hash map.</li>
+    <li>The <code>kid</code> is hashed for O(1) lookup of the public key.</li>
+    <li>On token arrival, the function extracts the <code>kid</code>, fetches the public key from the hash map, and verifies the JWT signature immediately.</li>
+    <li>If the <code>kid</code> isn’t found, the function refreshes keys from Cognito and updates the cache.</li>
+  </ul>
+
+  <strong>Benefits:</strong>
+  <ul>
+    <li>Constant-time key retrieval speeds up token validation.</li>
+    <li>Reduces backend load and latency.</li>
+    <li>Enables real-time blocking of unauthorized sessions at the edge.</li>
+  </ul>
+
+  <p>This hashing-based caching system ensures secure, scalable, and fast validation for OTT platforms.</p>
+
+  <div style="text-align:center; margin-top:20px;">
+    <img src="images/token.png" alt="JWT Token Validation with Hash Map and CloudFront Flow" width="600" height="400" border:1px solid #ccc; padding:5px;">
+  </div>
+    </li>
+    <li>
+  <strong style="font-size: 1.1rem;">Bloom Filters for Space-Efficient Blacklist Checks</strong>
+  <p>
+    OTT platforms often block known pirated session tokens or device IDs using large blacklists. But storing these lists directly at the edge can consume significant memory and increase lookup time.
+  </p>
+
+  <strong>Role of Bloom Filters:</strong>
+  <p>
+    Bloom Filters allow space-efficient representation of blacklists by using bit arrays and multiple hash functions. They support constant-time membership checks with acceptable false positives but no false negatives.
+  </p>
+
+  <strong >How Bloom Filters Work:</strong></b>
+  <ul>
+    <li>Each blacklisted token/device ID is hashed using multiple hash functions.</li>
+    <li>Each hash function sets a bit in a fixed-size bit array.</li>
+    <li>To check if a token is blacklisted, it is hashed again using the same functions.</li>
+    <li>If all corresponding bits are set, the token is probably in the blacklist.</li>
+    <li>If any bit is not set, it is definitely not in the blacklist.</li>
+  </ul>
+
+  <strong>Benefits:</strong>
+  <ul>
+    <li>Efficient O(k) time complexity, where k is number of hash functions (usually small).</li>
+    <li>Much lower space requirement than storing entire lists.</li>
+    <li>Ideal for deployment at edge locations with limited memory.</li>
+    <li>Helps block suspicious tokens/devices without frequent server lookups.</li>
+  </ul>
+  <button onclick="document.getElementById('bloomDialog').showModal()" style="margin-top: 10px; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">View  Implementation</button>
+
+  <dialog id="bloomDialog" style="padding: 20px; border: none; border-radius: 10px; width: 90%; max-width: 800px;">
+    <h3 style="color:#1d3557">Bloom Filter C++ Code</h3>
+    <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">
+#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;functional&gt;
+
+const int BLOOM_SIZE = 1000;
+const int HASH_COUNT = 3;
+
+class BloomFilter {
+  std::bitset&lt;BLOOM_SIZE&gt; bitArray;
+
+  size_t hash(const std::string&amp; data, int seed) const {
+    std::hash&lt;std::string&gt; hasher;
+    return hasher(data + std::to_string(seed)) % BLOOM_SIZE;
+  }
+
+public:
+  void insert(const std::string&amp; item) {
+    for (int i = 0; i &lt; HASH_COUNT; i++) {
+      bitArray.set(hash(item, i));
+    }
+  }
+
+  bool possiblyContains(const std::string&amp; item) const {
+    for (int i = 0; i &lt; HASH_COUNT; i++) {
+      if (!bitArray.test(hash(item, i)))
+        return false;
+    }
+    return true;
+  }
+};
+
+int main() {
+  BloomFilter filter;
+  filter.insert("token123");
+  filter.insert("piratedUser456");
+  filter.insert("device789");
+
+  std::cout &lt;&lt; "Check token123: " &lt;&lt; filter.possiblyContains("token123") &lt;&lt; "\n";
+  std::cout &lt;&lt; "Check userX: " &lt;&lt; filter.possiblyContains("userX") &lt;&lt; "\n";
+}
+    </pre>
+    <button onclick="document.getElementById('bloomDialog').close()" style="margin-top: 12px; padding: 6px 14px; background-color: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">Close</button>
+  </dialog>
+
+  <img src="images/bloom.png" alt="Bloom Filter Working Diagram" width="400" height="400" 600px;" />
+</section>
+
+    </li>
     
-    <!-- Microsoft Case Study: Xbox Gaming Division -->
-    <div class="project-card">
-      <h3>Microsoft's Xbox Gaming Revolution</h3>
-      <div class="description">
-        Microsoft's Xbox division successfully built a competitive gaming platform from scratch. Through strategic acquisitions, innovation in gaming consoles, and a focus on services like Xbox Game Pass, Microsoft managed to secure its position as one of the top three gaming console makers in the world, alongside Sony and Nintendo.
-      </div>
-      <div class="achievement">
-        Result: Xbox's growth significantly expanded Microsoft's presence in the gaming industry, shifting from software to entertainment and gaming services.
-      </div>
-      <div class="tech-badges">
-        <span class="tech-badge">Xbox</span>
-        <span class="tech-badge">Gaming</span>
-        <span class="tech-badge">Console</span>
-      </div>
-    </div>
+  </ul>
+  
+  
 
-    <!-- Microsoft Case Study: GitHub's Strategic Acquisition -->
-    <div class="project-card">
-      <h3>GitHub Acquisition and Open Source Support</h3>
-      <div class="description">
-        When Microsoft acquired GitHub, it faced a challenge of winning the trust of developers. However, Microsoft kept GitHub independent and supported the open-source community, fostering developer loyalty. This move helped Microsoft integrate into the developer ecosystem while also leveraging GitHub's vast user base to enhance its cloud and software services.
-      </div>
-      <div class="achievement">
-        Result: GitHub became an integral part of Microsoft's developer strategy, bolstering its position as a leading provider of development tools.
-      </div>
-      <div class="tech-badges">
-        <span class="tech-badge">GitHub</span>
-        <span class="tech-badge">Open Source</span>
-        <span class="tech-badge">Developer Tools</span>
-      </div>
+</div>
+
+ <div class="case-study-card">
+  <h3>Business Use Case 3: Efficient Routing for Content Delivery</h3>
+
+  <p><strong>Problem Statement:</strong></p>
+  <ul>
+    <li>Traditional CDN routing mechanisms rely on static or latency-only decisions.</li>
+    <li>This can lead to inefficient delivery paths under changing network conditions.</li>
+    <li>Results in delays and increased packet loss.</li>
+  </ul>
+
+  <p><strong>Solution Approach:</strong></p>
+  <ul>
+    <li>Integrate a custom intelligent routing microservice.</li>
+    <li>Use the A* algorithm to dynamically select the most optimal edge server or path.</li>
+    <li>Leverage AWS CloudFront with Lambda@Edge or CloudFront Functions as the entry point.</li>
+  </ul>
+
+  <p><strong>Data Structures & Algorithms:</strong></p>
+  <ul>
+    <li><strong>Graph Data Structure:</strong> Represents CDN edge locations and connections with weights like latency or hops.</li>
+    <li><strong>A* Algorithm:</strong>
+      <ul>
+        <li>Uses heuristics to find the optimal path through the network graph.</li>
+        <li>Efficiently chooses the best edge location or transit route in real-time.</li>
+        <li>Time Complexity: O(E), where E is the number of edges (efficient for sparse graphs).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><strong>How It Works:</strong></p>
+  <ul>
+    <li>Client requests content from CloudFront.</li>
+    <li>A Lambda@Edge function is triggered.</li>
+    <li>This function sends live metrics (latency, packet loss, etc.) to the routing microservice.</li>
+    <li>The microservice builds a weighted graph of possible paths.</li>
+    <li>The A* algorithm calculates the optimal delivery path.</li>
+    <li>CloudFront uses the result to route the content efficiently.</li>
+  </ul>
+
+  <p><strong>A* Algorithm Implementation:</strong> 
+    <button onclick="window.open('https://github.com/Rikora/A-star/blob/master/src/main.cpp', '_blank')" 
+  style="margin-top: 10px; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">
+  Click for Implementation
+</button>
+  </p>
+<ul><li><h4> Dijkstra’s Algorithm</h4></li></ul>
+ 
+
+  <p><strong>Use Case Fit:</strong><br>
+    Best suited for content routing when all edge weights (such as network latencies) are non-negative.
+    Helps select the shortest and most efficient path from the origin (e.g., CloudFront edge) to multiple destination nodes.
+  </p>
+
+  <p><strong>Working:</strong><br>
+    The algorithm begins at the source node and explores neighboring nodes with the smallest cumulative latency.
+    It uses a <em>min-heap (priority queue)</em> to always expand the nearest unexplored node.
+    This process continues until the shortest paths to all nodes are identified.
+  </p>
+
+  <p><strong>Time Complexity:</strong><br>
+    O((V + E) log V) — efficient for large sparse graphs where:<br>
+    V = number of nodes (edge locations)<br>
+    E = number of connections (network paths)
+  </p>
+ <p><strong>Dijkstra’s Algorithm Implementation:</strong> 
+  <button onclick="document.getElementById('dijkstraDialog').showModal()" style="margin-top: 10px; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">View Implementation</button>
+</p>
+
+<dialog id="dijkstraDialog" style="padding: 20px; border: none; border-radius: 10px; width: 90%; max-width: 800px;">
+  <h3 style="color:#1d3557">Dijkstra’s C++ Code</h3>
+  <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;"><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;unordered_map&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+typedef pair&lt;int, string&gt; pii;
+
+unordered_map&lt;string, int&gt; dijkstra(
+    unordered_map&lt;string, vector&lt;pair&lt;string, int&gt;&gt;&gt; &amp;graph,
+    string start
+) {
+    unordered_map&lt;string, int&gt; distances;
+    for (auto &amp;node : graph) {
+        distances[node.first] = INT_MAX;
+    }
+    distances[start] = 0;
+
+    priority_queue&lt;pii, vector&lt;pii&gt;, greater&lt;pii&gt;&gt; pq;
+    pq.push({0, start});
+
+    while (!pq.empty()) {
+        auto [currDist, currNode] = pq.top();
+        pq.pop();
+
+        if (currDist &gt; distances[currNode])
+            continue;
+
+        for (auto &amp;[neighbor, weight] : graph[currNode]) {
+            int distance = currDist + weight;
+            if (distance &lt; distances[neighbor]) {
+                distances[neighbor] = distance;
+                pq.push({distance, neighbor});
+            }
+        }
+    }
+
+    return distances;
+}
+
+int main() {
+    unordered_map&lt;string, vector&lt;pair&lt;string, int&gt;&gt;&gt; graph;
+    graph["A"] = {{"B", 2}, {"C", 5}};
+    graph["B"] = {{"A", 2}, {"C", 1}, {"D", 3}};
+    graph["C"] = {{"A", 5}, {"B", 1}, {"D", 2}};
+    graph["D"] = {{"B", 3}, {"C", 2}};
+
+    string start = "A";
+    auto result = dijkstra(graph, start);
+
+    cout &lt;&lt; "Shortest distances from node " &lt;&lt; start &lt;&lt; ":\n";
+    for (auto &amp;[node, dist] : result) {
+        cout &lt;&lt; "  " &lt;&lt; node &lt;&lt; " : " &lt;&lt; dist &lt;&lt; "\n";
+    }
+
+    return 0;
+}
+  </code></pre>
+  <button onclick="document.getElementById('dijkstraDialog').close()" style="margin-top: 12px; padding: 6px 14px; background-color: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">Close</button>
+</dialog>
+
+
+  <p><strong>Limitation:</strong><br>
+    Does not support graphs with negative edge weights, making it unsuitable for routing decisions
+    based on metrics like penalized or degraded paths.
+  </p>
+  <div class="comparison-image">
+    <h4>   A* vs Dijkstra Algorithm</h4>
+    <img src="images/a_star&dk2.png" alt="Dijkstra vs A* Comparison" width="600" height="350">
+    <p><em>Figure: Dijkstra explores all possible paths, A* prioritizes paths based on heuristic guidance (e.g., distance to goal).</em></p>
+  </div>
+</div>
+
+
+<div>
+
+ <div class="case-study-card">
+<h3>Business Use Case 4: Real-Time Game Leaderboard Delivery</h3>
+
+  <strong>Problem Statement</strong>
+  <p>
+    Multiplayer games like <em>PUBG</em> or <em>Fortnite</em> require instant updates to global leaderboards after every match.
+    Players around the world expect low-latency access to ranks, scores, and comparisons.
+    Any delay in updating or delivering this information can negatively impact user engagement and retention.
+  </p>
+
+  <strong>Theory</strong>
+  <ul>
+    <li>Leaderboard updates must be both frequent and efficient, especially during peak traffic times.</li>
+    <li>Delivery of leaderboard data must scale to millions of concurrent users globally.</li>
+    <li>Combining efficient backend computation (e.g., <strong>Fenwick Tree</strong>) with a fast content delivery network (e.g., <strong>Amazon CloudFront</strong>) achieves this.</li>
+  </ul>
+
+  <strong>Real-Time Usage</strong>
+  <ul>
+    <li>The backend uses a <strong>Fenwick Tree</strong> to manage score updates and compute rankings efficiently.</li>
+    <li>Amazon CloudFront caches the leaderboard content (JSON/UI) at edge locations globally.</li>
+    <li>During high-traffic events, this setup delivers updated leaderboards instantly to players.</li>
+  </ul>
+
+  <strong>Data Structures and Algorithms</strong>
+  <p><strong>Fenwick Tree (Binary Indexed Tree)</strong></p>
+  <ul>
+    <li><strong>Purpose:</strong> Efficient support for score updates and prefix sum queries</li>
+    <li><strong>Time Complexities:</strong></li>
+    <ul>
+      <li><code>update(index, value)</code> → <code>O(log n)</code></li>
+      <li><code>query(index)</code> → <code>O(log n)</code></li>
+    </ul>
+    <li><strong>Why Used:</strong> In a leaderboard with millions of players, Fenwick Tree scales efficiently where naive methods would not.</li>
+  </ul>
+
+  <!-- Implementation Button -->
+  <button onclick="document.getElementById('fenwickDialog').showModal()" style="margin-top: 10px; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">
+    View Implementation
+  </button>
+
+  <!-- Dialog Box for Code -->
+  <dialog id="fenwickDialog" style="padding: 20px; border: none; border-radius: 8px; width: 90%; max-width: 700px;">
+    <h4>Fenwick Tree - Python Pseudocode</h4>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto;">
+<code># #include <iostream>
+#include <vector>
+using namespace std;
+
+class FenwickTree {
+private:
+    vector<int> BIT; // Binary Indexed Tree array
+    int n;
+
+public:
+    // Constructor: initialize tree with size n
+    FenwickTree(int size) {
+        n = size;
+        BIT.resize(n + 1, 0); // 1-based indexing
+    }
+
+    // Update function: add 'val' to index 'i'
+    void update(int i, int val) {
+        while (i <= n) {
+            BIT[i] += val;
+            i += i & (-i); // Move to parent
+        }
+    }
+
+    // Get sum from 1 to i
+    int getSum(int i) {
+        int sum = 0;
+        while (i > 0) {
+            sum += BIT[i];
+            i -= i & (-i); // Move to child
+        }
+        return sum;
+    }
+
+    // Optional: Get sum from index l to r
+    int rangeSum(int l, int r) {
+        return getSum(r) - getSum(l - 1);
+    }
+};
+
+// Sample usage
+int main() {
+    vector<int> arr = {0, 2, 1, 1, 3, 2, 3}; // 1-based, arr[0] is dummy
+    int n = arr.size() - 1;
+
+    FenwickTree ft(n);
+
+    // Build the BIT
+    for (int i = 1; i <= n; i++) {
+        ft.update(i, arr[i]);
+    }
+
+    cout << "Prefix sum up to index 5: " << ft.getSum(5) << endl;
+    cout << "Sum from index 2 to 5: " << ft.rangeSum(2, 5) << endl;
+
+    // Update index 3 by adding 2
+    ft.update(3, 2);
+    cout << "After update, prefix sum up to index 5: " << ft.getSum(5) << endl;
+
+    return 0;
+}
+
+    </code>
+    </pre>
+    <button onclick="document.getElementById('fenwickDialog').close()" style="margin-top: 10px; padding: 6px 12px; background-color: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+  </dialog>
+
+  <strong>Example Workflow</strong>
+  <ul>
+    <li>A player finishes a match with 5 kills → backend calls <code>update(index, 5)</code></li>
+    <li>To display the player’s rank, the system calls <code>query(index - 1)</code> to determine how many players have higher scores.</li>
+    <li>Top N players can be retrieved using repeated queries or via a segment tree if required.</li>
+  </ul>
+
+  <!-- Image Section: Two Images Side-by-Side -->
+<div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+  <img src="images/fenwick11.png" alt="Leaderboard UI" style="width: 40%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+  <img src="images/fenwicksum.png" alt="CloudFront Global Distribution" style="width: 40%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+</div>
+
+<!-- System Design Image -->
+<div style="margin-top: 20px; text-align: center;">
+  <h4>System Design Architecture</h4>
+  <img src="images/sd1.png" alt="System Design Diagram" 
+       style="width: 15%; max-width: 400px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px auto;" />
+</div>
+
+<!-- Conclusion -->
+<strong>Conclusion</strong>
+<p>
+  This case study demonstrates how scalable data structures like Fenwick Trees, when integrated with content delivery networks like Amazon CloudFront, significantly improve real-time leaderboard responsiveness. 
+  By pushing updated leaderboard data to the edge and ensuring computation at logarithmic time complexity, gaming platforms can provide a competitive, seamless experience to millions of players simultaneously.
+</p>
+
+</div>
+
+
+ <div class="case-study-card" >
+
+  <h3>Business Use Case 5: High-Speed E-Commerce Catalog Browsing</h3>
+
+  <strong>Problem Statement</strong>
+  <p>
+    E-commerce platforms like Amazon or Flipkart must deliver product listings, filters, and images instantly to millions of users.
+    Any delay in loading catalogs, especially during peak sales events, leads to poor user experience and lost revenue.
+  </p>
+
+  <strong>Theory</strong>
+  <ul>
+    <li>Catalog browsing involves frequent access to mostly static data (product images, names, filters) and some dynamic data (price, availability).</li>
+    <li>To maintain speed and scale, CDNs like Amazon CloudFront are used to serve static assets.</li>
+    <li>Backend systems use efficient data structures to support filtering, searching, and price range queries.</li>
+  </ul>
+
+  <strong>Real-Time Usage</strong>
+  <ul>
+    <li>Amazon CloudFront caches and serves static product pages, thumbnails, and JS/CSS files from the nearest edge server.</li>
+    <li>Common filters like "price under ₹10,000" or "4-star and above" are either cached or precomputed.</li>
+    <li>Backend only handles complex or rarely used filters, reducing load and latency.</li>
+  </ul>
+
+  <strong>Data Structures and Algorithms</strong>
+
+  <p><strong>Trie</strong></p>
+  <ul>
+    <li>Used for instant search auto-suggestions as users type product names.</li>
+    <li>Time complexity:  O(N*L) where N is the number of words in the trie and L is the length of the longest word in the trie.</li>
+    <li>The trie holds a set of product names or past search queries.</li>
+    <li>As a user begins typing (e.g., "hel"), the trie is traversed character by character.</li>
+    Once a node representing the prefix is reached:
+    <li>If it's a complete word (marked by isWordEnd), it is returned as one suggestion.</li>
+    <li>All children of that node are recursively searched to collect further suggestions.</li>
+    <li>If the prefix doesn’t exist, no matches are returned.</li>
+  </ul>
+
+
+
+  
+  <!-- Implementation Buttons -->
+  <button onclick="document.getElementById('trieDialog').showModal()" 
+          style="margin: 10px 10px 10px 0; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">
+    View Trie Implementation
+  </button>
+
+
+  <!-- Trie Dialog Box -->
+  <dialog id="trieDialog" style="padding: 20px; border: none; border-radius: 8px; width: 90%; max-width: 700px;">
+    <h4>Trie Implementation - C++</h4>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; max-height: 400px;">
+<code>// C++ program to demonstrate auto-complete feature
+// using Trie data structure.
+#include <bits/stdc++.h>
+using namespace std;
+
+// Alphabet size (# of symbols)
+#define ALPHABET_SIZE (26)
+
+// Converts key current character into index
+// use only 'a' through 'z' and lower case
+#define CHAR_TO_INDEX(c) ((int)c - (int)'a')
+
+// trie node
+struct TrieNode {
+    struct TrieNode* children[ALPHABET_SIZE];
+
+    // isWordEnd is true if the node represents
+    // end of a word
+    bool isWordEnd;
+};
+
+// Returns new trie node (initialized to NULLs)
+struct TrieNode* getNode(void)
+{
+    struct TrieNode* pNode = new TrieNode;
+    pNode->isWordEnd = false;
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+        pNode->children[i] = NULL;
+
+    return pNode;
+}
+
+// If not present, inserts key into trie.  If the
+// key is prefix of trie node, just marks leaf node
+void insert(struct TrieNode* root, const string key)
+{
+    struct TrieNode* pCrawl = root;
+
+    for (int level = 0; level < key.length(); level++) {
+        int index = CHAR_TO_INDEX(key[level]);
+        if (!pCrawl->children[index])
+            pCrawl->children[index] = getNode();
+
+        pCrawl = pCrawl->children[index];
+    }
+
+    // mark last node as leaf
+    pCrawl->isWordEnd = true;
+}
+
+// Returns 0 if current node has a child
+// If all children are NULL, return 1.
+bool isLastNode(struct TrieNode* root)
+{
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+        if (root->children[i])
+            return 0;
+    return 1;
+}
+
+// Recursive function to print auto-suggestions for given
+// node.
+void suggestionsRec(struct TrieNode* root,
+                    string currPrefix)
+{
+    // found a string in Trie with the given prefix
+    if (root->isWordEnd)
+        cout << currPrefix << endl;
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+        if (root->children[i]) {
+            // child node character value
+            char child = 'a' + i;
+            suggestionsRec(root->children[i],
+                           currPrefix + child);
+        }
+}
+
+// print suggestions for given query prefix.
+int printAutoSuggestions(TrieNode* root, const string query)
+{
+    struct TrieNode* pCrawl = root;
+    for (char c : query) {
+        int ind = CHAR_TO_INDEX(c);
+
+        // no string in the Trie has this prefix
+        if (!pCrawl->children[ind])
+            return 0;
+
+        pCrawl = pCrawl->children[ind];
+    }
+    // If prefix is present as a word, but
+    // there is no subtree below the last
+    // matching node.
+    if (isLastNode(pCrawl)) {
+        cout << query << endl;
+        return -1;
+    }
+    suggestionsRec(pCrawl, query);
+    return 1;
+}
+
+// Driver Code
+int main()
+{
+    struct TrieNode* root = getNode();
+    insert(root, "hello");
+    insert(root, "dog");
+    insert(root, "hell");
+    insert(root, "cat");
+    insert(root, "a");
+    insert(root, "hel");
+    insert(root, "help");
+    insert(root, "helps");
+    insert(root, "helping");
+    int comp = printAutoSuggestions(root, "hel");
+
+    if (comp == -1)
+        cout << "No other strings found with this prefix\n";
+
+    else if (comp == 0)
+        cout << "No string found with this prefix\n";
+
+    return 0;
+}
+    </code>
+    </pre>
+    <button onclick="document.getElementById('trieDialog').close()" 
+            style="margin-top: 10px; padding: 6px 12px; background-color: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+  </dialog>
+
+  
+  <!-- Images Section -->
+  <div style="display: flex; justify-content: space-between; margin-top: 25px; gap: 10px;">
+    <div style="flex: 1; text-align: center;">
+      <h4>Trie Structure</h4>
+      <img src="images/trie.png" alt="Trie Diagram" style="max-width: 65%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <h4>Auto Suggestion</h4>
+      <img src="images/suggest1.png" alt="Segment Tree Diagram" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
     </div>
   </div>
-</section>
 
+  <p><strong>Segment Tree</strong></p>
+  <ul>
+    <li>Used to handle range queries like filtering products by price.</li>
+    <li>Time complexity: <code>O(log n)</code> for updates and queries.</li>
+    <li>The catalog prices are stored in an array, which is converted into a segment tree.</li>
+     <li>Each node of the tree represents a segment (sub-array) and stores useful information such as min price, max price, or product count in that range.</li>
+     <li>When a user applies a price filter (e.g., ₹5000 to ₹8000), the segment tree is queried for matching products in O(log n) time.</li>
+    <li>This avoids scanning all products, reducing server load and improving speed.</li>
+
+  </ul>
+  
+  <button onclick="document.getElementById('segmentTreeDialog').showModal()" 
+          style="margin: 10px 0 10px 0; padding: 8px 14px; border: none; border-radius: 6px; background-color: #3498db; color: white; cursor: pointer;">
+    View Segment Tree Implementation
+  </button>
+
+<!-- Segment Tree Dialog Box -->
+  <dialog id="segmentTreeDialog" style="padding: 20px; border: none; border-radius: 8px; width: 90%; max-width: 700px;">
+    <h4>Segment Tree Implementation - C++</h4>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; max-height: 400px;">
+<code>#include <iostream>
+#include <vector>
+using namespace std;
+
+class SegmentTree {
+private:
+    vector<int> tree;
+    int n;
+
+    void build(vector<int>& prices, int node, int start, int end) {
+        if (start == end) {
+            tree[node] = prices[start];
+        } else {
+            int mid = (start + end) / 2;
+            build(prices, 2 * node, start, mid);
+            build(prices, 2 * node + 1, mid + 1, end);
+            tree[node] = min(tree[2 * node], tree[2 * node + 1]); // store min price
+        }
+    }
+
+    int rangeMinQuery(int node, int start, int end, int l, int r) {
+        if (r < start || end < l) return INT_MAX;  // No overlap
+        if (l <= start && end <= r) return tree[node]; // Total overlap
+
+        int mid = (start + end) / 2;
+        int left = rangeMinQuery(2 * node, start, mid, l, r);
+        int right = rangeMinQuery(2 * node + 1, mid + 1, end, l, r);
+        return min(left, right);
+    }
+
+public:
+    SegmentTree(vector<int>& prices) {
+        n = prices.size();
+        tree.resize(4 * n);
+        build(prices, 1, 0, n - 1);
+    }
+
+    int query(int l, int r) {
+        return rangeMinQuery(1, 0, n - 1, l, r);
+    }
+};
+
+int main() {
+    vector<int> prices = {3000, 8000, 12000, 15000, 7000};
+    SegmentTree st(prices);
+
+    cout << "Minimum price from index 1 to 4: ₹" << st.query(1, 4) << endl;
+    return 0;
+}
+
+    </code>
+    </pre>
+    <button onclick="document.getElementById('segmentTreeDialog').close()" 
+            style="margin-top: 10px; padding: 6px 12px; background-color: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+  </dialog>
+  <div style="flex: 1; text-align: center;">
+      <h4>Segment Tree</h4>
+      <img src="images/segment.png" alt="Segment Tree Diagram" style="max-width: 50%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+    </div>
+
+  <strong style="display: block; margin-top: 30px;">Conclusion</strong>
+  <p>
+    The combination of <strong>Trie</strong> for fast search suggestions and <strong>Segment Tree</strong> for efficient range queries,
+    backed by Amazon CloudFront's CDN caching, ensures a highly responsive and scalable e-commerce catalog browsing experience.
+    This architecture helps handle millions of users smoothly even during high-traffic events.
+  </p>
+
+</div>
+
+<div class="case-study-card">
+  <h3>Business Use Case 6: API Gateway Acceleration & DDoS Protection</h3>
+  
+  <p><strong>Problem Statement:</strong> APIs serving mobile apps, IoT, and web platforms face slowdowns due to high request volumes and repeated calls. Backend servers can get overloaded, and APIs are vulnerable to attacks like DDoS, SQL injection, and bot scraping, risking downtime and data breaches.</p>
+  
+  <p><strong>Theory:</strong></p>
+  <ul>
+    <li>API responses must be fast and reliable even during traffic spikes.</li>
+    <li>Security layers like Web Application Firewalls (WAF) and DDoS protection are essential.</li>
+    <li>Using caching at edge locations reduces backend load.</li>
+    <li>Combining AWS CloudFront with AWS WAF and AWS Shield protects APIs and accelerates delivery.</li>
+  </ul>
+  
+  <p><strong>Real-Time Usage:</strong></p>
+  <ul>
+    <li>CloudFront caches frequent API GET requests at edge locations worldwide for instant response.</li>
+    <li>AWS WAF filters malicious requests in real time to block threats like SQLi and XSS.</li>
+    <li>AWS Shield Standard automatically mitigates common DDoS attacks.</li>
+    <li>This combination ensures APIs remain fast, scalable, and secure during heavy traffic or attacks.</li>
+  </ul>
+  
+  <p><strong>Data Structures and Algorithms:</strong></p>
+  <ul>
+    <li><strong>Caching Mechanism:</strong> Stores frequently requested API responses at edge nodes to reduce server hits.</li>
+    <li><strong>Rule-based Filtering:</strong> AWS WAF applies predefined or custom security rules to filter malicious traffic efficiently.</li>
+    <li><strong>Traffic Absorption:</strong> CloudFront’s distributed network absorbs large traffic volumes, helping prevent origin overload.</li>
+  </ul>
+  
+  <p><strong>Example Workflow:</strong></p>
+  <ul>
+    <li>A mobile app sends frequent API requests (e.g., fetching user data).</li>
+    <li>CloudFront edge location serves cached GET responses instantly.</li>
+    <li>AWS WAF inspects incoming requests and blocks suspicious patterns.</li>
+    <li>AWS Shield detects and mitigates volumetric DDoS attacks automatically.</li>
+    <li>Backend servers handle only legitimate, uncached requests, maintaining performance.</li>
+  </ul>
+  
+  <!-- Placeholder for image of working -->
+  <p><em>      <img src="images/ddos.png" alt="Segment Tree Diagram" style="max-width: 50%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+</em></p>
+</div>
+
+<hr>
+<div class="case-study-card">
+  <h4>References</h4>
+  <ol>
+    <li id="ref1">Amazon Web Services. (n.d.). <a href="https://aws.amazon.com/cloudfront" target="_blank">Amazon CloudFront – Fast Content Delivery Network (CDN)</a></li>
+    <li>Amazon Web Services. (n.d.). <a href="https://aws.amazon.com/lambda/edge" target="_blank">Lambda@Edge – Run your code closer to users</a></li>
+    <li>Vedansh Narang. (n.d.). <a href="https://medium.com/@nvedansh/design-a-realtime-gaming-leaderboard-df0dcb9183ae" target="_blank">Design a Realtime Gaming Leaderboard</a></li>
+<li>DataCamp. (n.d.). <a href="https://www.datacamp.com/tutorial/a-star-algorithm" target="_blank">A* Algorithm Tutorial: Introduction, Implementation, and Examples</a></li>
+<li>HowToDoInJava. (n.d.). <a href="https://howtodoinjava.com/java/java-security/jwt-json-web-token/" target="_blank">JWT (JSON Web Token) - Introduction, Structure, and Implementation</a></li>
+    <li>Amazon Web Services Blog. (n.d.). <a href="https://aws.amazon.com/blogs/networking-and-content-delivery/authorizationedge-how-to-use-lambdaedge-and-json-web-tokens-to-enhance-web-application-security/" target="_blank">Authorization@Edge: How to use Lambda@Edge and JSON Web Tokens</a></li>
+    <li>GeeksforGeeks. (n.d.). <a href="https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/" target="_blank">Binary Indexed Tree or Fenwick Tree</a></li>
+    <li>AWS. (n.d.). <a href="https://aws.amazon.com/shield/" target="_blank">AWS Shield – DDoS Protection</a></li>
+
+  </ol>
+</div>
+
+
+  
 <section id="contact" class="contact-section">
   <div class="container">
     <h2 class="contact-title"><i class="fas fa-envelope"></i> Contact Me</h2>
-    
+
     <div class="contact-socials">
       <a href="https://github.com/Anoop042004" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       <a href="https://www.linkedin.com/in/anoop-uk-kadakol-83359726a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="mailto:kadakolanoopuk@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
     </div>
-    
-    <form class="contact-form" action="https://formspree.io/f/mdoqvwjv" method="POST">
-      <input type="hidden" name="_subject" value="New portfolio contact from website">
-      <input type="hidden" name="_next" value="thank-you.html">
-      
+
+    <form id="contact-form" class="contact-form">
       <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      
+      <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+
       <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      
+      <input type="email" id="email" name="user_email" placeholder="Enter your email" required>
+
       <label for="message">Your Message</label>
       <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-      
+
       <button type="submit" class="send-btn">Send Message</button>
     </form>
   </div>
 </section>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("CMJyld-shB6bBPI5Q");
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    emailjs.sendForm("service_gv2icqi", "template_3yb4tup", this)
+      .then(function() {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("Failed to send message. Please try again later.");
+        console.error("EmailJS error:", error);
+      });
+  });
+</script>
+
+
 
 <footer>
   &copy; 2025 Anoop U K. All rights reserved.
